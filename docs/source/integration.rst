@@ -73,14 +73,17 @@ This is the guidance for using quark-engine as a Python module
     .. code-block:: json
 
         {
-            "sample": "14d9f1a92dd984d6040cc41ed06e273e",
-            "apk-name": "14d9f1a92dd984d6040cc41ed06e273e.apk",
-            "size": 166917,
-            "warnning": "High Risk",
-            "summary-score": 2,
+            "md5": "14d9f1a92dd984d6040cc41ed06e273e",
+            "apk_filename": "14d9f1a92dd984d6040cc41ed06e273e.apk",
+            "size_bytes": 166917,
+            "threat_level": "High Risk",
+            "total_score": 2,
             "crimes": [
                 {
                     "crime": "Send contact via SMS",
+                    "score": 2,
+                    "weight": 2.0,
+                    "confidence": "100%",
                     "permissions": [
                         "android.permission.SEND_SMS",
                         "android.permission.READ_CONTACTS"
@@ -95,9 +98,22 @@ This is the guidance for using quark-engine as a Python module
                             "method": "sendTextMessage"
                         }
                     ],
-                    "confidence": "100%",
-                    "score": 2,
-                    "weight": 2.0
+                    "sequnce_show_up": [
+                        {
+                            "class": "Lcom/google/progress/AndroidClientService;",
+                            "method": "doByte"
+                        },
+                        {
+                            "class": "Lcom/google/progress/AndroidClientService;",
+                            "method": "sendMessage"
+                        }
+                    ],
+                    "same_operation_show_up": [
+                        {
+                            "class": "Lcom/google/progress/AndroidClientService;",
+                            "method": "sendMessage"
+                        }
+                    ]
                 }
             ]
         }
