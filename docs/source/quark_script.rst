@@ -3718,7 +3718,7 @@ Quark Script CWE-927.py
 Quark Rule: startActivityWithIntent.json
 ========================================
 
-.. image:: https://i.postimg.cc/g0ktL58W/jie-tu-2025-12-19-wan-shang7-05-17.png
+.. image:: https://i.postimg.cc/YSPCzMmQ/jie-tu-2025-12-20-shang-wu10-29-09.png
 
 .. code-block:: json
 
