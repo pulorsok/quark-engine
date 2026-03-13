@@ -12,6 +12,7 @@ from tqdm import tqdm
 from quark import __version__, config
 from quark.core.parallelquark import ParallelQuark
 from quark.core.quark import Quark
+from quark.deobfuscator import deobfuscate_apk, is_jadx_available
 from quark.core.struct.ruleobject import RuleObject
 from quark.logo import logo
 from quark.rulegeneration import RuleGeneration
@@ -157,6 +158,14 @@ logo()
     default=False,
     show_default=True,
 )
+@click.option(
+    "--deobf",
+    "deobfuscate",
+    help="Run jadx deobfuscation on the APK before analysis to improve accuracy on obfuscated malware.",
+    is_flag=True,
+    default=False,
+    required=False,
+)
 def entry_point(
     summary,
     detail,
@@ -175,8 +184,29 @@ def entry_point(
     core_library,
     num_of_process,
     auto_fix_checksum,
+    deobfuscate,
 ):
     """Quark is an Obfuscation-Neglect Android Malware Scoring System"""
+
+    # --deobf: run jadx deobfuscation as a pre-processing step
+    if deobfuscate:
+        if not is_jadx_available():
+            print_warning(
+                "jadx is not installed or not on PATH. "
+                "Install jadx (https://github.com/skylot/jadx) to use --deobf."
+            )
+        else:
+            import tempfile
+            _deobf_apk_list = list(apk) if not isinstance(apk, (list, tuple)) else apk
+            for _apk_path in _deobf_apk_list:
+                _deobf_out = tempfile.mkdtemp(prefix="quark_deobf_")
+                print_info(f"Deobfuscating {_apk_path} → {_deobf_out}")
+                result = deobfuscate_apk(_apk_path, _deobf_out)
+                if result is None:
+                    print_warning(f"Deobfuscation failed for {_apk_path}, continuing with original APK.")
+                else:
+                    print_info(f"Deobfuscation complete: {result}")
+
     # Load rules
     rule_buffer_list = []
     rule_filter = summary or detail
