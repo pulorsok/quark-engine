@@ -1,3 +1,15 @@
+quark-engine (26.5.1-0kali1) kali-dev; urgency=medium
+
+  * Rule Enhancement
+
+    - Add new Quark rules for the Antidot, Arsink, and TrickMo malware families. (#903, #907, and #909)
+
+  * Bug Fixes
+
+    - Separate `filled-new-array` parsing from invoke-kind handling to avoid incorrect bytecode classification. (#867 and #886)
+
+ --  Shaun Dang <pulorsok@gmail.com>  Mon, 04 May 2026 11:51:26 +0800
+
 quark-engine (26.4.1-0kali1) kali-dev; urgency=medium
 
   * Document Enhancements
