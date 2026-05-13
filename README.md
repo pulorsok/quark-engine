@@ -56,8 +56,11 @@
     <td><img src="https://github.com/user-attachments/assets/60b5afac-3244-480e-9aad-0337183bc6a0" width="310"></td>
     <td><img src="https://github.com/user-attachments/assets/ea8d1e15-234b-4197-8d3e-1984fcacb6c7" width="310"></td>
   </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/b3437fa0-e1a7-465c-8de7-92b25ba99eda" width="310"></td>
+    <td><img src="https://github.com/user-attachments/assets/fb4c16ba-a266-4453-b335-ad470a23e2e5" width="310"></td>
+  </tr>
 </table>
-
 
 
 | Family      | Summary                                            | Signature Behaviors                    | Report |
@@ -74,6 +77,8 @@
 | Antidot     | Banking trojan disguised as legitimate updates for financial data theft. | 1. Intercept SMS messages (OTP).<br>2. Log user input (keylogging).<br>3. Enable remote control via C2. | [View](https://quark-engine.readthedocs.io/en/latest/quark_rules.html#new-quark-rules-for-antidot) |
 | Arsink      | Banking trojan focusing on credential and financial data exfiltration. | 1. Steal sensitive data from device.<br>2. Intercept SMS messages (OTP). | [View](https://quark-engine.readthedocs.io/en/latest/quark_rules.html#new-quark-rules-for-arsink) |
 | TrickMo     | Banking trojan using overlay attacks and accessibility abuse for credential theft. | 1. Overlay attacks to steal banking credentials.<br>2. Intercept SMS for 2FA bypass.<br>3. Screen recording and accessibility abuse.<br>4. Dynamic payload loading via reflection. | [View](https://quark-engine.readthedocs.io/en/latest/quark_rules.html#new-quark-rules-for-trickmo) |
+| Anubis      | Banking trojan with RAT capabilities.              | 1. Overlay credential theft.<br>2. Keylogging.<br>3. Intercept SMS (OTP).<br>4. Remote control via C2. | [View](https://quark-engine.readthedocs.io/en/latest/quark_rules.html#new-quark-rules-for-anubis) |
+| GodFather  | Banking trojan targeting financial credentials through overlay and accessibility abuse. | 1. Perform overlay attacks to steal credentials.<br>2. Abuse Accessibility services.<br>3. Intercept SMS messages (OTP).<br>4. Steal banking credentials and sensitive data. | [View](https://quark-engine.readthedocs.io/en/latest/quark_rules.html#new-quark-rules-for-godfather) |
 
 ## Quick Start
 
