@@ -59,6 +59,7 @@
   <tr>
     <td><img src="https://github.com/user-attachments/assets/b3437fa0-e1a7-465c-8de7-92b25ba99eda" width="310"></td>
     <td><img src="https://github.com/user-attachments/assets/fb4c16ba-a266-4453-b335-ad470a23e2e5" width="310"></td>
+    <td><img src="https://github.com/user-attachments/assets/dd7cae0f-c27d-41cb-8e56-813aa2ff5997" width="310"></td>
   </tr>
 </table>
 
@@ -79,6 +80,7 @@
 | TrickMo     | Banking trojan using overlay attacks and accessibility abuse for credential theft. | 1. Overlay attacks to steal banking credentials.<br>2. Intercept SMS for 2FA bypass.<br>3. Screen recording and accessibility abuse.<br>4. Dynamic payload loading via reflection. | [View](https://quark-engine.readthedocs.io/en/latest/quark_rules.html#new-quark-rules-for-trickmo) |
 | Anubis      | Banking trojan with RAT capabilities.              | 1. Overlay credential theft.<br>2. Keylogging.<br>3. Intercept SMS (OTP).<br>4. Remote control via C2. | [View](https://quark-engine.readthedocs.io/en/latest/quark_rules.html#new-quark-rules-for-anubis) |
 | GodFather  | Banking trojan targeting financial credentials through overlay and accessibility abuse. | 1. Perform overlay attacks to steal credentials.<br>2. Abuse Accessibility services.<br>3. Intercept SMS messages (OTP).<br>4. Steal banking credentials and sensitive data. | [View](https://quark-engine.readthedocs.io/en/latest/quark_rules.html#new-quark-rules-for-godfather) |
+| TangleBot   | SMS-based Android malware stealing personal and financial data. | 1. Spread through SMS phishing links.<br>2. Control device interactions and overlay screens.<br>3. Access SMS, contacts, call logs, camera, and microphone.<br>4. Steal account and financial information. | [View](https://quark-engine.readthedocs.io/en/latest/quark_rules.html#new-quark-rules-for-tanglebot) |
 
 ## Quick Start
 
